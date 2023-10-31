@@ -49,7 +49,7 @@ def main():
         "iat": int(time.time()),
         "email": email,
     }
-    bearer_token = jwt.encode(claim_set, private_key_algorithm="RS256")
+    bearer_token = jwt.encode(claim_set, private_key, algorithm="RS256")
 
     today = datetime.datetime.now()
     year = today.year
