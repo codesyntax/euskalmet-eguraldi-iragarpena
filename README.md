@@ -32,3 +32,9 @@ python main.py
 ## Exekuzio automatikoa
 
 GitHub Actions zerbitzuari esker script hau UTC orduko 6:00, 12:00, 16:00 eta 20:00tan exekutatzen da.
+
+## Adibidea:
+
+Hemen duzu Antzuolako iragarpenaren JSON fitxategia: [https://raw.githubusercontent.com/erral/eguraldi_iragarpena/main/forecasts/antzuola-euskalmet.json](https://raw.githubusercontent.com/erral/eguraldi_iragarpena/main/forecasts/antzuola-euskalmet.json)
+
+Hemen duzu Eibarko iragarpenaren JSON fitxategia: [https://raw.githubusercontent.com/erral/eguraldi_iragarpena/main/forecasts/eibar-euskalmet.json](https://raw.githubusercontent.com/erral/eguraldi_iragarpena/main/forecasts/eibar-euskalmet.json)
