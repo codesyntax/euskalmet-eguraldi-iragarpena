@@ -28,6 +28,7 @@ def process_results(input):
     for item in output.get('trendsByDate', {}).get('set', []):
         id = item.get('weather', {}).get('id', '')
         item['weather']['icon_name'] = f'{id}.png'
+        item['weather']['full_path'] = f"https://api.euskadi.eus{item['weather']['path']}.png"
         trendsByDate.append(item)
     output['trendsByDate'] = trendsByDate
 
