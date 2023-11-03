@@ -95,12 +95,10 @@ def main():
 
     today = datetime.datetime.now()
     year = today.year
-    month = today.month
-    day = today.day
+    month = f'{today.month:02}'
+    day = f'{today.day:02}'
 
-    tomorrow = today + datetime.timedelta(days=1)
-
-    forecastday = f'{tomorrow.year}{tomorrow.month:02}{tomorrow.day:02}'
+    forecastday = f'{year}{month}{day}'
 
     for item in LOCATIONS_TO_PROCESS:
         assert 'zone' in item
