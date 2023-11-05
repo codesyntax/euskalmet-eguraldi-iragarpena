@@ -114,14 +114,17 @@ def main():
         )
         print(f"Downloading forecast: {item['location']} {forecastday} ")
 
-        result = session.get(url)
-        if result.ok:
-            results_json = result.json()
-            processed_results = process_results(results_json)
-            with open(f'forecasts/{item["location"]}-euskalmet.json', 'w') as fp:
-                json.dump(processed_results, fp)
-        else:
-            print(f"ERROR downloading", url, result.status_code)
+        try:
+            result = session.get(url)
+            if result.ok:
+                results_json = result.json()
+                processed_results = process_results(results_json)
+                with open(f'forecasts/{item["location"]}-euskalmet.json', 'w') as fp:
+                    json.dump(processed_results, fp)
+            else:
+                print(f"ERROR downloading", url, result.status_code)
+        except requests.exceptions.ReadTimeout:
+            print(f'Connection timed out downloading', url)
 
 def print_locations():
     """ print all available locations """
