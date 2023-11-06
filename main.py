@@ -29,6 +29,8 @@ def process_results(input):
         id = item.get('weather', {}).get('id', '')
         item['weather']['icon_name'] = f'{id}.png'
         item['weather']['full_path'] = f"https://api.euskadi.eus/{item['weather']['path']}"
+        item['weather']['icon_name_modern'] = f'i{id}d.svg'
+        item['weather']['full_path_modern'] = f'https://www.euskalmet.euskadi.eus/meteoassets/icons/euskalmet/i{id}d.svg'
         trendsByDate.append(item)
     output['trendsByDate'] = trendsByDate
 
