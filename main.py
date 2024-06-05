@@ -33,7 +33,7 @@ def process_results(input):
         item["weather"][
             "full_path"
         ] = f"https://api.euskadi.eus/{item.get('weather', {}).get('path', '')}"
-        item["weather"]["icon_name_modern"] = f"i{id}d.svg"
+        item["weather"]["icon_name_modern"] = f"webmet00-i{id}d.svg"
         item["weather"][
             "full_path_modern"
         ] = f"https://www.euskalmet.euskadi.eus/media/assets/icons/euskalmet/webmet00-i{id}d.svg"
