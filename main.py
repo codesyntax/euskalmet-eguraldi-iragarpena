@@ -36,7 +36,7 @@ def process_results(input):
         item["weather"]["icon_name_modern"] = f"i{id}d.svg"
         item["weather"][
             "full_path_modern"
-        ] = f"https://www.euskalmet.euskadi.eus/meteoassets/icons/euskalmet/i{id}d.svg"
+        ] = f"https://www.euskalmet.euskadi.eus/media/assets/icons/euskalmet/webmet00-i{id}d.svg"
         trendsByDate.append(item)
     output["trendsByDate"] = trendsByDate
 
